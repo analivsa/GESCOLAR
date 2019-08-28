@@ -33,3 +33,5 @@ try
     <?php endwhile ?>
     </tbody>
 </table>
+
+<link href="css/estilos.css" type="text/css" rel="stylesheet" />
