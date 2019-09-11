@@ -4,11 +4,11 @@
  */
 try
 {
-     include ' includes/conexao.php';
+     include 'includes/conexao.php';
 
-     $sql = "SELECT id_aluno, nome, cpf,
+     $sql = "SELECT id, nome, cpf,
                     DATE_FORMAT('%d/Dm/%Y', data_nascimento) AS data_nasc
-            FROM alunos
+            FROM aluno
             ORDER BY nome ASC ";
 
     $stmt = $conexao->prepare($sql);
@@ -18,6 +18,11 @@ try
         echo $e->getMessage();
 }
  ?>
+
+<link href="css/estilos.css" type="text/css" rel="stylesheet" />
+
+<?php include_once 'includes/cabecalho.php' ?>
+
  <table>
     <thead>
         <tr>
@@ -34,4 +39,5 @@ try
     </tbody>
 </table>
 
-<link href="css/estilos.css" type="text/css" rel="stylesheet" />
+
+
