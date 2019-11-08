@@ -1,4 +1,4 @@
-﻿create database gescolar;
+create database gescolar;
 
 use gescolar;
 
@@ -7,7 +7,7 @@ create table aluno (
     nome varchar(255),
     data_nascimento date,
     sexo char(1),
-    gereno varchar(255),
+    genero varchar(100),
     cpf char(11),
     cidade varchar(100),
     estado char(2),
@@ -20,7 +20,7 @@ create table aluno (
 create table curso (
     id int auto_increment,
     nome varchar(150),
-    primary key(id)
+    primary key (id)
 );
 
 create table turma (
@@ -28,5 +28,5 @@ create table turma (
     id_curso int,
     descricao varchar(50),
     primary key (id),
-    foreign key (id_curso) references curso(id)
+    foreign key (id_curso) references curso (id)
 );
