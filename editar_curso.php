@@ -4,14 +4,14 @@ try
     include 'includes/conexao.php';
 
     if(isset($_REQUEST['atualizar']))
-}
-     $sql = "UPDATE curso SET nome = ? WHERE id = ? ";
+    {
+        $sql = "UPDATE curso SET nome = ? WHERE id = ? ";
 
-     $stmt = $conexao->prepare($sql);
-     $stmt->binParam(1, $_REQUEST['nome']);
-     $stmt->binParam(2, $_REQUEST['id_curso']);
-     $stmt->execute();
-}
+        $stmt = $conexao->prepare($sql);
+        $stmt->binParam(1, $_REQUEST['nome']);
+        $stmt->binParam(2, $_REQUEST['id_curso']);
+        $stmt->execute();
+    }
 
 if(isset($_REQUEST['excluir']))
 {

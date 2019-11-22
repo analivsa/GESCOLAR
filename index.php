@@ -3,7 +3,7 @@
 // caso o usuario clique em sair
 if(isset($_REQUEST['Sair'])) {
 
-     unset($_SESSION['gescolar_dados_usuario']) //destroi a sessao de autenticacao do usuario
+     unset($_SESSION['gescolar_dados_usuario']); //destroi a sessao de autenticacao do usuario
      header("location: login.php"); //redireciona para a pagina de login
 }
 
